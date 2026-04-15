@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Процедурный 3D FPS</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <canvas id="renderCanvas"></canvas>
+  <div id="crosshair"></div>
+  <div id="hud">
+    <div id="topBar">
+      <div id="leftHud">
+        <div id="healthPanel" aria-label="health hearts"></div>
+        <div id="statsPanel">Очки: 0 / 100</div>
+      </div>
+      <div id="weaponPanel">Оружие: Пистолет</div>
+    </div>
+    <div id="message">Нажмите "Начать", захватите курсор и дойдите до 100 очков.</div>
+    <div id="bottomHud">
+      <div id="ammoWidget">
+        <div id="ammoGrid" aria-label="ammo columns"></div>
+        <div id="ammoText">0</div>
+      </div>
+      <canvas id="minimap" width="170" height="170"></canvas>
+    </div>
+  </div>
+
+  <div id="startOverlay">
+    <div id="startCard">
+      <h1>Процедурный FPS</h1>
+      <p><b>Управление:</b> WASD - ходьба, мышь - обзор, Space - прыжок.</p>
+      <p><b>Бой:</b> ЛКМ - стрелять, R - перезарядка, 1/2 - смена оружия.</p>
+      <p>Враги атакуют с дистанции плазмой. За каждого врага +10 очков.</p>
+      <p>При 100 очках откроется портал выхода. Дойдите до него, чтобы победить.</p>
+      <button id="startBtn">Начать новый забег</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.babylonjs.com/babylon.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
